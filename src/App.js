@@ -1,6 +1,6 @@
 import React from 'react';
 import Graphin, { Behaviors, Utils } from '@antv/graphin';
-import { Row, Col, Card } from 'antd';
+//import { Row, Col, Card } from 'antd';
 import './App.css';
 const { ZoomCanvas, FitView } = Behaviors;
 const data2 = Utils.mock(8).tree().graphin();
@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://0.0.0.0:5000/data/company/structure/1")
+    fetch("https://data-scripts-ednprdella-uc.a.run.app/data/company/structure/1")
       .then(res => res.json())
       .then(
         (result) => {
