@@ -2,4 +2,19 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  z-index: 1;
+}
+
+.selections {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: 80%;
+  max-width: 500px;
+  z-index: 100;
+}
+
+.selections > div {
+ margin-bottom: 10px;
+ background: white;
 }
