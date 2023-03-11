@@ -30,7 +30,7 @@ class App extends React.Component {
   }
   // https://data-scripts-ednprdella-uc.a.run.app
   componentDidMount() {
-    fetch("https://data-scripts-ednprdella-uc.a.run.app/data/companies/")
+    fetch("https://data-scripts-ednprdella-uc.a.run.app/data/companies")
       .then(res => res.json())
       .then(
         (result) => {
