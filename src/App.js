@@ -4,7 +4,7 @@ import './App.css';
 import Select from "react-dropdown-select";
 //import { Row, Col, Card } from 'antd';
 const { ZoomCanvas, FitView } = Behaviors;
-
+const server = 'https://data-scripts-ednprdella-uc.a.run.app'
 const selectModeOptions = [
   { 
     value: 0,
@@ -28,9 +28,9 @@ class App extends React.Component {
       data: {'edges': [], 'nodes': []}
     };
   }
-  // https://data-scripts-ednprdella-uc.a.run.app
+  // 
   componentDidMount() {
-    fetch("https://data-scripts-ednprdella-uc.a.run.app/data/companies")
+    fetch(server+"/data/companies")
       .then(res => res.json())
       .then(
         (result) => {
@@ -72,7 +72,7 @@ class App extends React.Component {
       showGraph: false
     })
 
-    var request_url = mode === 0 ? "https://data-scripts-ednprdella-uc.a.run.app/data/company/structure/"+this.state.company : "https://data-scripts-ednprdella-uc.a.run.app/data/personnel/with_events/"+this.state.company
+    var request_url = mode === 0 ? server+"/data/company/structure/"+this.state.company : server+"/data/personnel/with_events/"+this.state.company
     fetch(request_url)
       .then(res => res.json())
       .then(
